@@ -1,0 +1,38 @@
+{
+  "name": "enc-site",
+  "version": "1.0.0",
+  "description": "encentric.com web site",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./bin/www",
+    "build": "tsc",
+    "tsc": "tsc",
+    "watch": "tsc --watch",
+    "img": "docker build -t bryanmacfarlane/ec-web .",
+    "cont": "docker run -p 7771:7771 -d bryanmacfarlane/ec-web",
+    "prod": "docker run -p 7771:7771 -d --restart unless-stopped bryanmacfarlane/ec-web",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/bryanmacfarlane/ec-site"
+  },
+  "author": "Bryan MacFarlane",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.1",
+    "@types/express": "^4.16.1",
+    "@types/node": "^10.14.5",
+    "@types/react": "^16.8.14",
+    "@types/react-dom": "^16.8.4",
+    "typescript": "^3.4.4"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.16.4",
+    "express-react-views": "^0.11.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
