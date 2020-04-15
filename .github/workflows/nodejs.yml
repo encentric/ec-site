@@ -28,7 +28,3 @@ jobs:
       working-directory: web
     - run: npm run build --if-present
       working-directory: web
-    - run: npm test
-      working-directory: web
-      env:
-        CI: true
